@@ -7,14 +7,23 @@ class NotesModeSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
             SizedBox(
               height: 40,
             ),
-            CustomTextFeild(),
+            CustomTextFeild(
+              hint: 'Titel',
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            CustomTextFeild(
+              hint: 'Content',
+              maxLine: 5,
+            ),
           ],
         ),
       ),
